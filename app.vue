@@ -1,12 +1,131 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
+
+<div class="columns">
+
+<div class="column">
+
+<div class="field">
+  <label class="label">Name</label>
+  <div class="control">
+    <input type="text" v-model="name" class="input" placeholder="Ihr Name">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">eMail</label>
+  <div class="control">
+    <input type="email" v-model="email" class="input" placeholder="Ihre eMail-Adresse">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Telefon</label>
+  <div class="control">
+    <input type="text" v-model="phone" class="input" placeholder="Ihre Telefon-Nummer">
+  </div>
+</div>
+
+<div class="field is-grouped is-grouped-right">
+  <div class="control">
+    <button class="button is-primary" @click="step = 1">Weiter</button>
+  </div>
+</div>
+
+
+</div>
+<div class="column">
+<div :class="{'is-hidden': step < 1}">
+
+<div class="field">
+  <label class="label">Stundensatz</label>
+  <div class="field has-addons">
+  <div class="control">
+    <input type="number" v-model="rate" class="input" placeholder="Wieviel verrechnen Sie pro Stunde?">
+  </div>
+  <p class="control"><span class="button is-static">€</span></p>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Wochenarbeitsstunden</label>
+  <div class="control">
+    <input type="number" v-model="hours" class="input" placeholder="Wieviele Stunden arbeiten Sie pro Woche?">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Büro-Anteil</label>
+  <div class="field has-addons">
+  <div class="control">
+    <input type="number" v-model="share" class="input" placeholder="Wieviel davon verbringen Sie im Büro?">
+  </div>
+  <p class="control"><span class="button is-static">%</span></p>
+  </div>
+</div>
+
+<div class="field is-grouped is-grouped-right">
+  <div class="control">
+    <button class="button is-primary" @click="step = 2">Weiter</button>
+  </div>
+</div>
+
+</div>
+</div>
+<div class="column">
+<div :class="{'is-hidden': step < 2}">
+
+<p><strong>Potenzial: {{ Math.round((20/100) * (share / 100) * hours) }}h (20% von {{ (share / 100) * hours }}h, gerundet)</strong></p>
+
+<p class="my-3"><a :href="consultingLink">Jetzt Beratungsgespräch buchen</a></p>
+
+<p>Wochenumsatz = {{ rate * hours }}€ ({{ rate }}€ × {{ hours }}h)</p>
+<p>Büroarbeit = {{ (share / 100) * hours }}h ({{ share }}% von {{ hours }}h)</p>
+
+
+</div>
+</div>
+</div>
+
+
+<div class="has-text-grey-lighter" style="border: 1px solid #f0f0f0;">
+
+<p>Step = {{ step }}</p>
+<p>Kontakt:
+Name = {{ name }} |
+Mail = {{ email }} |
+Phone = {{ phone }}
+</p>
+<p>Daten:
+Rate = {{ rate }} |
+Hours = {{ hours }} |
+Share = {{ share }}
+</p>
+
+</div>
+
     </div>
   </section>
 </template>
+
+<script setup>
+const step = ref(0);
+
+const name = ref("");
+const email = ref("");
+const phone = ref("");
+
+const rate = ref("");
+const hours = ref("");
+const share = ref("");
+
+const consultingLink = computed( () => {
+
+const link = new URL("https://calendly.com/nicolasfaure/60");
+link.searchParams.set("name", name.value);
+link.searchParams.set("email", email.value);
+link.searchParams.set("a1", phone.value);
+return link.href;
+});
+</script>
