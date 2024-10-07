@@ -140,6 +140,15 @@
 </tbody>
 </table>
 
+<p>Mit meiner Methode kannst du bis zu {{ perYear(weeklySavedWorkingHours) }}
+Stunden im Jahr mehr Zeit haben! Zum Beispiel für deine Familie, Freunde,
+Hobbies, neue Kunden oder strategische Planung, um dein Unternehmen noch
+erfolgreicher zu machen.</p>
+
+<p>Mit meiner Methode kannst du bis zu {{ perYear(weeklySavedCosts ) }} € im
+Jahr einsparen, die du zum Beispiel in neue Maschinen, Software, in die
+Weiterbildung deiner Mitarbeiter oder in deine Altersvorsorge, investieren
+kannst.</p>
 
 </div>
 </div>
