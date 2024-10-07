@@ -101,15 +101,15 @@
 <tbody>
 <tr>
 <th>Stunden</th>
-<td>{{ weeklyWorkingHours }}</td>
-<td>{{ perMonth(weeklyWorkingHours) }}</td>
-<td>{{ perYear(weeklyWorkingHours) }}</td>
+<td>{{ weeklyWorkingHours }} h</td>
+<td>{{ perMonth(weeklyWorkingHours) }} h</td>
+<td>{{ perYear(weeklyWorkingHours) }} h</td>
 </tr>
 <tr>
 <th>Kosten</th>
-<td>{{ weeklyCosts }}</td>
-<td>{{ perMonth(weeklyCosts ) }}</td>
-<td>{{ perYear(weeklyCosts ) }}</td>
+<td>{{ weeklyCosts }} €</td>
+<td>{{ perMonth(weeklyCosts ) }} €</td>
+<td>{{ perYear(weeklyCosts ) }} €</td>
 </tr>
 </tbody>
 </table>
@@ -127,15 +127,15 @@
 <tbody>
 <tr>
 <th>Zeitersparnis</th>
-<td>{{ weeklySavedWorkingHours }}</td>
-<td>{{ perMonth(weeklySavedWorkingHours) }}</td>
-<td>{{ perYear(weeklySavedWorkingHours) }}</td>
+<td>{{ weeklySavedWorkingHours }} h</td>
+<td>{{ perMonth(weeklySavedWorkingHours) }} h</td>
+<td>{{ perYear(weeklySavedWorkingHours) }} h</td>
 </tr>
 <tr>
 <th>Kostenersparnis</th>
-<td>{{ weeklySavedCosts }}</td>
-<td>{{ perMonth(weeklySavedCosts ) }}</td>
-<td>{{ perYear(weeklySavedCosts ) }}</td>
+<td>{{ weeklySavedCosts }} €</td>
+<td>{{ perMonth(weeklySavedCosts ) }} €</td>
+<td>{{ perYear(weeklySavedCosts ) }} €</td>
 </tr>
 </tbody>
 </table>
