@@ -152,7 +152,7 @@
               </div>
             </div>
 
-            <table>
+            <table class="table is-fullwidth">
               <caption>
                 Deine aktuelle Zeit- und Kostenbilanz
               </caption>
@@ -180,7 +180,7 @@
               </tbody>
             </table>
 
-            <table>
+            <table class="table is-fullwidth">
               <caption>
                 Deine mögliche Zukunft nach unserer Zusammenarbeit
               </caption>
