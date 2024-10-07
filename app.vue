@@ -240,6 +240,13 @@
   </section>
 </template>
 
+<style scoped>
+table tbody td {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+</style>
+
 <script setup>
 const step = ref(0);
 
