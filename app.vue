@@ -86,12 +86,59 @@
 <div class="column">
 <div :class="{'is-hidden': step < 2}">
 
-<p><strong>Potenzial: {{ Math.round((20/100) * (share / 100) * hours) }}h (20% von {{ (share / 100) * hours }}h, gerundet)</strong></p>
+<p class="mb-3"><a :href="consultingLink">Jetzt Beratungsgespräch buchen</a></p>
 
-<p class="my-3"><a :href="consultingLink">Jetzt Beratungsgespräch buchen</a></p>
+<table>
+<caption>Deine aktuelle Zeit- und Kostenbilanz</caption>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>pro Woche</th>
+<th>pro Monat</th>
+<th>pro Jahr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Stunden</th>
+<td>{{ weeklyWorkingHours }}</td>
+<td>{{ perMonth(weeklyWorkingHours) }}</td>
+<td>{{ perYear(weeklyWorkingHours) }}</td>
+</tr>
+<tr>
+<th>Kosten</th>
+<td>{{ weeklyCosts }}</td>
+<td>{{ perMonth(weeklyCosts ) }}</td>
+<td>{{ perYear(weeklyCosts ) }}</td>
+</tr>
+</tbody>
+</table>
 
-<p>Wochenumsatz = {{ rate * hours }}€ ({{ rate }}€ × {{ hours }}h)</p>
-<p>Büroarbeit = {{ (share / 100) * hours }}h ({{ share }}% von {{ hours }}h)</p>
+<table>
+<caption>Deine mögliche Zukunft nach unserer Zusammenarbeit</caption>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>pro Woche</th>
+<th>pro Monat</th>
+<th>pro Jahr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Zeitersparnis</th>
+<td>{{ weeklySavedWorkingHours }}</td>
+<td>{{ perMonth(weeklySavedWorkingHours) }}</td>
+<td>{{ perYear(weeklySavedWorkingHours) }}</td>
+</tr>
+<tr>
+<th>Kostenersparnis</th>
+<td>{{ weeklySavedCosts }}</td>
+<td>{{ perMonth(weeklySavedCosts ) }}</td>
+<td>{{ perYear(weeklySavedCosts ) }}</td>
+</tr>
+</tbody>
+</table>
 
 
 </div>
@@ -147,4 +194,14 @@ link.searchParams.set("email", email.value);
 link.searchParams.set("a1", phone.value);
 return link.href;
 });
+
+const weeklyWorkingHours = computed( () => Math.round((share.value / 100) * hours.value) );
+const weeklyCosts = computed( () => rate.value * weeklyWorkingHours.value );
+
+const weeklySavedWorkingHours = computed( () => Math.round((20/100) * (share.value / 100) * hours.value) );
+const weeklySavedCosts = computed( () => rate.value * weeklySavedWorkingHours.value );
+
+const perMonth = (value) => value * 4;
+const perYear = (value) => perMonth(value) * 12;
+
 </script>
