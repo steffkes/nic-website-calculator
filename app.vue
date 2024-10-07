@@ -6,17 +6,26 @@
 
 <div class="column">
 
+<form @submit="handleProgress">
+
 <div class="field">
-  <label class="label">Name</label>
+  <label class="label">Name *</label>
   <div class="control">
-    <input type="text" v-model="name" class="input" placeholder="Ihr Name">
+    <input type="text" v-model="name" class="input" required="true" placeholder="Ihr Name">
   </div>
 </div>
 
 <div class="field">
-  <label class="label">eMail</label>
+  <label class="label">Firma *</label>
   <div class="control">
-    <input type="email" v-model="email" class="input" placeholder="Ihre eMail-Adresse">
+    <input type="text" v-model="company" class="input" required="true" placeholder="Name der Firma">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">eMail *</label>
+  <div class="control">
+    <input type="email" v-model="email" class="input" required="true" placeholder="Ihre eMail-Adresse">
   </div>
 </div>
 
@@ -29,37 +38,38 @@
 
 <div class="field is-grouped is-grouped-right">
   <div class="control">
-    <button class="button is-primary" @click="step = 1">Weiter</button>
+    <button type="submit" class="button is-primary">Weiter</button>
   </div>
 </div>
 
+</form>
 
 </div>
 <div class="column">
-<div :class="{'is-hidden': step < 1}">
+<form :class="{'is-hidden': step < 1}" @submit="handleProgress">
 
 <div class="field">
-  <label class="label">Stundensatz</label>
+  <label class="label">Stundensatz *</label>
   <div class="field has-addons">
   <div class="control">
-    <input type="number" v-model="rate" class="input" placeholder="Wieviel verrechnen Sie pro Stunde?">
+    <input type="number" v-model="rate" class="input" required="true" placeholder="Wieviel verrechnen Sie pro Stunde?">
   </div>
   <p class="control"><span class="button is-static">€</span></p>
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Wochenarbeitsstunden</label>
+  <label class="label">Wochenarbeitsstunden *</label>
   <div class="control">
-    <input type="number" v-model="hours" class="input" placeholder="Wieviele Stunden arbeiten Sie pro Woche?">
+    <input type="number" v-model="hours" class="input" required="true" placeholder="Wieviele Stunden arbeiten Sie pro Woche?">
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Büro-Anteil</label>
+  <label class="label">Büro-Anteil *</label>
   <div class="field has-addons">
   <div class="control">
-    <input type="number" v-model="share" class="input" placeholder="Wieviel davon verbringen Sie im Büro?">
+    <input type="number" v-model="share" class="input" required="true" placeholder="Wieviel davon verbringen Sie im Büro?">
   </div>
   <p class="control"><span class="button is-static">%</span></p>
   </div>
@@ -67,11 +77,11 @@
 
 <div class="field is-grouped is-grouped-right">
   <div class="control">
-    <button class="button is-primary" @click="step = 2">Weiter</button>
+    <button type="submit" class="button is-primary">Weiter</button>
   </div>
 </div>
 
-</div>
+</form>
 </div>
 <div class="column">
 <div :class="{'is-hidden': step < 2}">
@@ -94,6 +104,7 @@
 <p>Step = {{ step }}</p>
 <p>Kontakt:
 Name = {{ name }} |
+Company = {{ company }} |
 Mail = {{ email }} |
 Phone = {{ phone }}
 </p>
@@ -113,12 +124,20 @@ Share = {{ share }}
 const step = ref(0);
 
 const name = ref("");
+const company = ref("");
 const email = ref("");
 const phone = ref("");
 
 const rate = ref("");
 const hours = ref("");
 const share = ref("");
+
+const handleProgress = (event) => {
+console.debug({ event })
+event.preventDefault();
+event.stopPropagation();
+step.value = step.value + 1;
+}
 
 const consultingLink = computed( () => {
 
