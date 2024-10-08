@@ -222,6 +222,12 @@
               Beispiel in neue Maschinen, Software, in die Weiterbildung deiner
               Mitarbeiter oder in deine Altersvorsorge, investieren kannst.
             </p>
+
+            <p v-if="weeklySavedWorkingHours >= 3">
+              <a :href="consultingLink" class="button is-primary"
+                >Jetzt Beratungsgespräch buchen</a
+              >
+            </p>
           </div>
         </div>
       </div>
