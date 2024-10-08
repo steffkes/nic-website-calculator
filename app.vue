@@ -117,7 +117,7 @@
           </form>
         </div>
         <div class="column">
-          <div :class="{ 'is-hidden': step < 2 }">
+          <div :class="{ 'is-hidden': step < 2 }" class="content">
             <div class="mb-3">
               <div v-if="weeklySavedWorkingHours >= 6">
                 <p style="background-color: #f00">
