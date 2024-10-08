@@ -119,37 +119,37 @@
         <div class="column">
           <div :class="{ 'is-hidden': step < 2 }" class="content">
             <div class="mb-3">
-              <div v-if="weeklySavedWorkingHours >= 6">
-                <p style="background-color: #f00">
-                  Du kannst noch einiges an Zeit und Kosten in deinem Betrieb
-                  einsparen! Buche dir jetzt einen Call mit mir und lass uns
-                  gemeinsam herausfinden, wie du wöchentlich bis zu
-                  {{ weeklySavedCosts }} € und
-                  {{ weeklySavedWorkingHours }} Stunden einsparen kannst!
-                </p>
-                <p>
-                  <a :href="consultingLink">Jetzt Beratungsgespräch buchen</a>
-                </p>
-              </div>
+              <p
+                v-if="weeklySavedWorkingHours >= 6"
+                style="background-color: #f00"
+              >
+                Du kannst noch einiges an Zeit und Kosten in deinem Betrieb
+                einsparen! Buche dir jetzt einen Call mit mir und lass uns
+                gemeinsam herausfinden, wie du wöchentlich bis zu
+                {{ weeklySavedCosts }} € und
+                {{ weeklySavedWorkingHours }} Stunden einsparen kannst!
+              </p>
 
-              <div v-else-if="weeklySavedWorkingHours >= 3">
-                <p style="background-color: #ff0">
-                  Da ist noch Potenzial, das du ausschöpfen kannst! Deine
-                  wöchentliche Einsparung liegt bei bis zu
-                  {{ weeklySavedCosts }} € Lass uns gerne darüber sprechen, wie
-                  ich dich noch weiter unterstützen kann.
-                </p>
-                <p>
-                  <a :href="consultingLink">Jetzt Beratungsgespräch buchen</a>
-                </p>
-              </div>
+              <p
+                v-else-if="weeklySavedWorkingHours >= 3"
+                style="background-color: #ff0"
+              >
+                Da ist noch Potenzial, das du ausschöpfen kannst! Deine
+                wöchentliche Einsparung liegt bei bis zu
+                {{ weeklySavedCosts }} € Lass uns gerne darüber sprechen, wie
+                ich dich noch weiter unterstützen kann.
+              </p>
 
-              <div v-else>
-                <p style="background-color: #0f0">
-                  Herzlichen Glückwunsch! Du bist richtig gut aufgestellt: Deine
-                  Ersparnis pro Woche liegt bei bis zu {{ weeklySavedCosts }} €
-                </p>
-              </div>
+              <p v-else style="background-color: #0f0">
+                Herzlichen Glückwunsch! Du bist richtig gut aufgestellt: Deine
+                Ersparnis pro Woche liegt bei bis zu {{ weeklySavedCosts }} €
+              </p>
+
+              <p v-if="weeklySavedWorkingHours >= 3">
+                <a :href="consultingLink" class="button is-primary"
+                  >Jetzt Beratungsgespräch buchen</a
+                >
+              </p>
             </div>
 
             <table class="table is-fullwidth">
