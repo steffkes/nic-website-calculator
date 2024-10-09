@@ -156,61 +156,66 @@
           </div>
         </div>
 
-        <table class="table is-fullwidth">
-          <caption>
-            Deine aktuelle Zeit- und Kostenbilanz
-          </caption>
-          <thead>
-            <tr>
-              <th>&nbsp;</th>
-              <th>pro Woche</th>
-              <th>pro Monat</th>
-              <th>pro Jahr</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Stunden</th>
-              <td>{{ weeklyWorkingHours }} h</td>
-              <td>{{ perMonth(weeklyWorkingHours) }} h</td>
-              <td>{{ perYear(weeklyWorkingHours) }} h</td>
-            </tr>
-            <tr>
-              <th>Kosten</th>
-              <td>{{ weeklyCosts }} €</td>
-              <td>{{ perMonth(weeklyCosts) }} €</td>
-              <td>{{ perYear(weeklyCosts) }} €</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table class="table is-fullwidth">
-          <caption>
-            Deine mögliche Zukunft nach unserer Zusammenarbeit
-          </caption>
-          <thead>
-            <tr>
-              <th>&nbsp;</th>
-              <th>pro Woche</th>
-              <th>pro Monat</th>
-              <th>pro Jahr</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Zeitersparnis</th>
-              <td>{{ weeklySavedWorkingHours }} h</td>
-              <td>{{ perMonth(weeklySavedWorkingHours) }} h</td>
-              <td>{{ perYear(weeklySavedWorkingHours) }} h</td>
-            </tr>
-            <tr>
-              <th>Kostenersparnis</th>
-              <td>{{ weeklySavedCosts }} €</td>
-              <td>{{ perMonth(weeklySavedCosts) }} €</td>
-              <td>{{ perYear(weeklySavedCosts) }} €</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="columns is-6">
+          <div class="column">
+            <table class="table is-fullwidth">
+              <caption>
+                Deine aktuelle Zeit- und Kostenbilanz
+              </caption>
+              <thead>
+                <tr>
+                  <th>&nbsp;</th>
+                  <th>pro Woche</th>
+                  <th>pro Monat</th>
+                  <th>pro Jahr</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Stunden</th>
+                  <td>{{ weeklyWorkingHours }} h</td>
+                  <td>{{ perMonth(weeklyWorkingHours) }} h</td>
+                  <td>{{ perYear(weeklyWorkingHours) }} h</td>
+                </tr>
+                <tr>
+                  <th>Kosten</th>
+                  <td>{{ weeklyCosts }} €</td>
+                  <td>{{ perMonth(weeklyCosts) }} €</td>
+                  <td>{{ perYear(weeklyCosts) }} €</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="column">
+            <table class="table is-fullwidth">
+              <caption>
+                Deine mögliche Zukunft nach unserer Zusammenarbeit
+              </caption>
+              <thead>
+                <tr>
+                  <th>&nbsp;</th>
+                  <th>pro Woche</th>
+                  <th>pro Monat</th>
+                  <th>pro Jahr</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Zeit&shy;ersparnis</th>
+                  <td>{{ weeklySavedWorkingHours }} h</td>
+                  <td>{{ perMonth(weeklySavedWorkingHours) }} h</td>
+                  <td>{{ perYear(weeklySavedWorkingHours) }} h</td>
+                </tr>
+                <tr>
+                  <th>Kosten&shy;ersparnis</th>
+                  <td>{{ weeklySavedCosts }} €</td>
+                  <td>{{ perMonth(weeklySavedCosts) }} €</td>
+                  <td>{{ perYear(weeklySavedCosts) }} €</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
         <p>
           Mit meiner Methode kannst du bis zu
@@ -251,6 +256,7 @@ table thead th {
 
 table tbody td {
   font-variant-numeric: tabular-nums;
+  text-wrap: nowrap;
 }
 </style>
 
