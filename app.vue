@@ -240,6 +240,10 @@
 </template>
 
 <style scoped>
+table caption {
+  text-align: left;
+}
+
 table tbody td,
 table thead th {
   text-align: right !important;
