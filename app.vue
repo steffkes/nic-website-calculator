@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <div class="container">
+    <div class="container is-max-desktop">
       <div class="columns">
         <div class="column">
           <form @submit="handleProgress">
