@@ -144,11 +144,16 @@
             Ersparnis pro Woche liegt bei bis zu {{ weeklySavedCosts }} €
           </p>
 
-          <p v-if="weeklySavedWorkingHours >= 3">
-            <a :href="consultingLink" class="button is-primary"
-              >Jetzt Beratungsgespräch buchen</a
-            >
-          </p>
+          <div
+            v-if="weeklySavedWorkingHours >= 3"
+            class="has-text-centered my-6"
+          >
+            <p>
+              <a :href="consultingLink" class="button is-primary"
+                >Jetzt Beratungsgespräch buchen</a
+              >
+            </p>
+          </div>
         </div>
 
         <table class="table is-fullwidth">
@@ -222,11 +227,13 @@
           Mitarbeiter oder in deine Altersvorsorge, investieren kannst.
         </p>
 
-        <p v-if="weeklySavedWorkingHours >= 3">
-          <a :href="consultingLink" class="button is-primary"
-            >Jetzt Beratungsgespräch buchen</a
-          >
-        </p>
+        <div v-if="weeklySavedWorkingHours >= 3" class="has-text-centered my-6">
+          <p>
+            <a :href="consultingLink" class="button is-primary"
+              >Jetzt Beratungsgespräch buchen</a
+            >
+          </p>
+        </div>
       </div>
     </div>
   </section>
