@@ -121,7 +121,7 @@
 
       <div :class="{ 'is-hidden': step != 2 }" class="content">
         <div class="mb-3">
-          <p v-if="weeklySavedWorkingHours >= 6" style="background-color: #f00">
+          <p v-if="weeklySavedWorkingHours >= 6" class="notification is-danger">
             Du kannst noch einiges an Zeit und Kosten in deinem Betrieb
             einsparen! Buche dir jetzt einen Call mit mir und lass uns gemeinsam
             herausfinden, wie du wöchentlich bis zu
@@ -131,7 +131,7 @@
 
           <p
             v-else-if="weeklySavedWorkingHours >= 3"
-            style="background-color: #ff0"
+            class="notification is-warning"
           >
             Da ist noch Potenzial, das du ausschöpfen kannst! Deine wöchentliche
             Einsparung liegt bei bis zu
@@ -139,7 +139,7 @@
             dich noch weiter unterstützen kann.
           </p>
 
-          <p v-else style="background-color: #0f0">
+          <p v-else class="notification is-success">
             Herzlichen Glückwunsch! Du bist richtig gut aufgestellt: Deine
             Ersparnis pro Woche liegt bei bis zu {{ weeklySavedCosts }} €
           </p>
