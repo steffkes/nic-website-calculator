@@ -1,7 +1,7 @@
 services:
   app:
     image: node:22.9.0-alpine3.19
-    command: "npm run dev"
+    command: sh -c "npm install && npm run dev"
     working_dir: /app
     volumes:
       - ./:/app
