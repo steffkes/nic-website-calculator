@@ -114,7 +114,9 @@
 
               <div class="has-text-centered my-6">
                 <p>
-                  <a :href="consultingLink" class="button is-primary"
+                  <a
+                    :href="consultingLink"
+                    class="button is-primary is-fullwidth"
                     >Jetzt Beratungsgespräch buchen</a
                   >
                 </p>
@@ -211,7 +213,7 @@
 
             <div class="has-text-centered my-6">
               <p>
-                <a :href="consultingLink" class="button is-primary"
+                <a :href="consultingLink" class="button is-primary is-fullwidth"
                   >Jetzt Beratungsgespräch buchen</a
                 >
               </p>
