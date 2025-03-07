@@ -225,6 +225,14 @@
   </section>
 </template>
 
+<style>
+:root {
+  --bulma-primary-h: 45deg;
+  --bulma-primary-s: 93%;
+  --bulma-primary-l: 53%;
+}
+</style>
+
 <style scoped>
 table caption {
   text-align: left;
