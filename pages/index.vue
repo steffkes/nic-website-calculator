@@ -3,6 +3,34 @@
     <div class="container is-max-desktop">
       <div class="columns">
         <div class="column">
+          <table class="table is-fullwidth">
+            <caption>
+              Deine mögliche Zukunft nach unserer Zusammenarbeit
+            </caption>
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                <th>pro Woche</th>
+                <th>pro Monat</th>
+                <th>pro Jahr</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Zeit&shy;ersparnis</th>
+                <td>{{ weeklySavedWorkingHours }} h</td>
+                <td>{{ perMonth(weeklySavedWorkingHours) }} h</td>
+                <td>{{ perYear(weeklySavedWorkingHours) }} h</td>
+              </tr>
+              <tr>
+                <th>Kosten&shy;ersparnis</th>
+                <td>{{ weeklySavedCosts }} €</td>
+                <td>{{ perMonth(weeklySavedCosts) }} €</td>
+                <td>{{ perYear(weeklySavedCosts) }} €</td>
+              </tr>
+            </tbody>
+          </table>
+
           <form @submit="handleProgress">
             <div class="field">
               <label class="label">Stundensatz *</label>
