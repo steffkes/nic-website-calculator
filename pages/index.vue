@@ -250,6 +250,10 @@ table tbody td {
 </style>
 
 <script setup>
+const {
+  query: { name, email, phone },
+} = useRoute();
+
 const rate = ref(60);
 const hours = ref(40);
 const share = ref(20);
@@ -262,6 +266,9 @@ const handleProgress = (event) => {
 
 const consultingLink = computed(() => {
   const link = new URL("https://calendly.com/nicolasfaure/60");
+  link.searchParams.set("name", name);
+  link.searchParams.set("email", email);
+  link.searchParams.set("a1", phone);
   return link.href;
 });
 
