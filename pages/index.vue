@@ -9,23 +9,25 @@
             </caption>
             <thead>
               <tr>
-                <th>&nbsp;</th>
-                <th>pro Woche</th>
-                <th>pro Monat</th>
-                <th>pro Jahr</th>
+                <th style="text-align: left !important">Ersparnis</th>
+                <th>Zeit</th>
+                <th>Kosten</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th>Zeit&shy;ersparnis</th>
+                <th>pro Woche</th>
                 <td>{{ weeklySavedWorkingHours }} h</td>
-                <td>{{ perMonth(weeklySavedWorkingHours) }} h</td>
-                <td>{{ perYear(weeklySavedWorkingHours) }} h</td>
+                <td>{{ weeklySavedCosts }} €</td>
               </tr>
               <tr>
-                <th>Kosten&shy;ersparnis</th>
-                <td>{{ weeklySavedCosts }} €</td>
+                <th>pro Monat</th>
+                <td>{{ perMonth(weeklySavedWorkingHours) }} h</td>
                 <td>{{ perMonth(weeklySavedCosts) }} €</td>
+              </tr>
+              <tr>
+                <th>pro Jahr</th>
+                <td>{{ perYear(weeklySavedWorkingHours) }} h</td>
                 <td>{{ perYear(weeklySavedCosts) }} €</td>
               </tr>
             </tbody>
@@ -128,22 +130,26 @@
                   <thead>
                     <tr>
                       <th>&nbsp;</th>
-                      <th>pro Woche</th>
-                      <th>pro Monat</th>
-                      <th>pro Jahr</th>
+                      <th>Stunden</th>
+                      <th>Kosten</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th>Stunden</th>
+                      <th>pro Woche</th>
                       <td>{{ weeklyWorkingHours }} h</td>
-                      <td>{{ perMonth(weeklyWorkingHours) }} h</td>
-                      <td>{{ perYear(weeklyWorkingHours) }} h</td>
-                    </tr>
-                    <tr>
-                      <th>Kosten</th>
                       <td>{{ weeklyCosts }} €</td>
+                    </tr>
+
+                    <tr>
+                      <th>pro Monat</th>
+                      <td>{{ perMonth(weeklyWorkingHours) }} h</td>
                       <td>{{ perMonth(weeklyCosts) }} €</td>
+                    </tr>
+
+                    <tr>
+                      <th>pro Jahr</th>
+                      <td>{{ perYear(weeklyWorkingHours) }} h</td>
                       <td>{{ perYear(weeklyCosts) }} €</td>
                     </tr>
                   </tbody>
@@ -156,23 +162,25 @@
                   </caption>
                   <thead>
                     <tr>
-                      <th>&nbsp;</th>
-                      <th>pro Woche</th>
-                      <th>pro Monat</th>
-                      <th>pro Jahr</th>
+                      <th style="text-align: left !important">Ersparnis</th>
+                      <th>Zeit</th>
+                      <th>Kosten</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th>Zeit&shy;ersparnis</th>
+                      <th>pro Woche</th>
                       <td>{{ weeklySavedWorkingHours }} h</td>
-                      <td>{{ perMonth(weeklySavedWorkingHours) }} h</td>
-                      <td>{{ perYear(weeklySavedWorkingHours) }} h</td>
+                      <td>{{ weeklySavedCosts }} €</td>
                     </tr>
                     <tr>
-                      <th>Kosten&shy;ersparnis</th>
-                      <td>{{ weeklySavedCosts }} €</td>
+                      <th>pro Monat</th>
+                      <td>{{ perMonth(weeklySavedWorkingHours) }} h</td>
                       <td>{{ perMonth(weeklySavedCosts) }} €</td>
+                    </tr>
+                    <tr>
+                      <th>pro Jahr</th>
+                      <td>{{ perYear(weeklySavedWorkingHours) }} h</td>
                       <td>{{ perYear(weeklySavedCosts) }} €</td>
                     </tr>
                   </tbody>
