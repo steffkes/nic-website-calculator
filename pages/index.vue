@@ -5,7 +5,8 @@
         <div class="column">
           <table class="table is-fullwidth">
             <caption>
-              Deine mögliche Zukunft nach unserer Zusammenarbeit
+              Deine zukünftige Zeit- und Kostenbilanz nach unserer
+              Zusammenarbeit
             </caption>
             <thead>
               <tr>
@@ -108,16 +109,18 @@
               </p>
 
               <p v-else class="notification is-success">
-                Herzlichen Glückwunsch! Du bist richtig gut aufgestellt: Deine
-                Ersparnis pro Woche liegt bei bis zu {{ weeklySavedCosts }} €
+                Du bist bereits gut aufgestellt, dennoch könnte für dich eine
+                Ersparnis von bis zu {{ weeklySavedCosts }} € pro Woche möglich
+                sein!
               </p>
 
               <div class="has-text-centered my-6">
                 <p>
                   <a
                     :href="consultingLink"
+                    target="_blank"
                     class="button is-primary is-fullwidth"
-                    >Jetzt Beratungsgespräch buchen</a
+                    >Jetzt Kennenlerngespräch buchen</a
                   >
                 </p>
               </div>
@@ -160,7 +163,8 @@
               <div class="column">
                 <table class="table is-fullwidth">
                   <caption>
-                    Deine mögliche Zukunft nach unserer Zusammenarbeit
+                    Deine zukünftige Zeit- und Kostenbilanz nach unserer
+                    Zusammenarbeit
                   </caption>
                   <thead>
                     <tr>
@@ -191,30 +195,31 @@
             </div>
 
             <p>
-              Mit meiner Methode kannst du
+              Mit meiner Methode
               <strong
-                >bis zu {{ perYear(weeklySavedWorkingHours) }} Stunden im Jahr
-                mehr Zeit</strong
+                >sparst du bis zu {{ perYear(weeklySavedWorkingHours) }} Stunden
+                Zeit und {{ perYear(weeklySavedCosts) }} € pro Jahr</strong
               >
-              haben! Zum Beispiel für deine Familie, Freunde, Hobbies, neue
-              Kunden oder strategische Planung, um dein Unternehmen noch
-              erfolgreicher zu machen.
+              – Zeit, die du gezielt für deine Familie, Freunde, Hobbys oder die
+              strategische Weiterentwicklung deines Unternehmens nutzen kannst.
             </p>
-
             <p>
-              Mit meiner Methode kannst du
+              Gleichzeitig reduzierst du unnötige Kosten und kannst das gesparte
+              Geld in neue Maschinen, moderne Software oder die Weiterbildung
+              deiner Mitarbeiter investieren.
               <strong
-                >bis zu {{ perYear(weeklySavedCosts) }} € im Jahr
-                einsparen</strong
-              >, die du zum Beispiel in neue Maschinen, Software, in die
-              Weiterbildung deiner Mitarbeiter oder in deine Altersvorsorge,
-              investieren kannst.
+                >So machst du dein Unternehmen nicht nur effizienter, sondern
+                auch zukunftssicherer</strong
+              >.
             </p>
 
             <div class="has-text-centered my-6">
               <p>
-                <a :href="consultingLink" class="button is-primary is-fullwidth"
-                  >Jetzt Beratungsgespräch buchen</a
+                <a
+                  :href="consultingLink"
+                  target="_blank"
+                  class="button is-primary is-fullwidth"
+                  >Jetzt Kennenlerngespräch buchen</a
                 >
               </p>
             </div>
