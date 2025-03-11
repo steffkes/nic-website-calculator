@@ -68,7 +68,7 @@
             </div>
 
             <div class="field">
-              <label class="label">Büro-Anteil *</label>
+              <label class="label">davon Büro-Anteil *</label>
               <div class="field has-addons">
                 <div class="control">
                   <input
@@ -120,7 +120,7 @@
                     :href="consultingLink"
                     target="_blank"
                     class="button is-primary is-fullwidth"
-                    >Jetzt Kennenlerngespräch buchen</a
+                    >Jetzt kostenfreies Kennenlerngespräch buchen</a
                   >
                 </p>
               </div>
@@ -219,7 +219,7 @@
                   :href="consultingLink"
                   target="_blank"
                   class="button is-primary is-fullwidth"
-                  >Jetzt Kennenlerngespräch buchen</a
+                  >Jetzt kostenfreies Kennenlerngespräch buchen</a
                 >
               </p>
             </div>
