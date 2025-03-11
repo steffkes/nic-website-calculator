@@ -120,6 +120,7 @@
                     :href="consultingLink"
                     target="_blank"
                     class="button is-primary is-fullwidth"
+                    style="white-space: initial"
                     >Jetzt kostenfreies Kennenlerngespräch buchen</a
                   >
                 </p>
@@ -219,6 +220,7 @@
                   :href="consultingLink"
                   target="_blank"
                   class="button is-primary is-fullwidth"
+                  style="white-space: initial"
                   >Jetzt kostenfreies Kennenlerngespräch buchen</a
                 >
               </p>
